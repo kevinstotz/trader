@@ -1,0 +1,9 @@
+environs==11.0.0
+SQLAlchemy==2.0.30
+sqlalchemy_orm==1.2.10
+SQLAlchemy_serializer==1.4.12
+coinbase-advanced-py==1.2.2
+yfinance==0.2.38
+alpaca-py==0.21.1
+coinbase-advanced-py==1.2.2
+v4-client-py==4.0.0
