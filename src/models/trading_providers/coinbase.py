@@ -14,6 +14,8 @@ COINBASE_API_KEY = env.str("COINBASE_API_KEY", "nada")
 COINBASE_API_SECRET = env.str("COINBASE_API_SECRET", "nada")
 COINBASE_TESTING_API_KEY = env.str("COINBASE_TESTING_API_KEY", "nada")
 COINBASE_TESTING_API_SECRET = env.str("COINBASE_TESTING_API_SECRET", "nada")
+COINBASE_BASE_URL = env.str("COINBASE_BASE_URL", "nada")
+COINBASE_TESTING_BASE_URL = env.str("COINBASE_TESTING_BASE_URL", "nada")
 
 
 class CoinbaseTradingModel(Base):
@@ -24,6 +26,8 @@ class CoinbaseTradingModel(Base):
     api_secret: Mapped[str] = mapped_column(String(255), default=COINBASE_API_SECRET)
     testing_api_key: Mapped[str] = mapped_column(String(255), default=COINBASE_TESTING_API_KEY)
     testing_api_secret: Mapped[str] = mapped_column(String(255), default=COINBASE_TESTING_API_SECRET)
+    testing_base_url: Mapped[str] = mapped_column(String(255), default=COINBASE_TESTING_BASE_URL)
+    base_url: Mapped[str] = mapped_column(String(255), default=COINBASE_BASE_URL)
     maker_fee: Mapped[float] = mapped_column(Float, default=0.0)
     taker_fee: Mapped[float] = mapped_column(Float, default=0.0)
     active: Mapped[bool] = mapped_column(Boolean(), unique=False, default=True)

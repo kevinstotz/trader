@@ -5,7 +5,11 @@ from typing import Any
 class TradingProviderABC(ABC):
 
     @abstractmethod
-    def create_order(self, order: str, product: str, size: int, leverage: float) -> dict:
+    def get_client(self,) -> Any:
+        ...
+
+    @abstractmethod
+    def create_order(self, order_id: str, product: str, size: int) -> dict:
         ...
 
     @abstractmethod
